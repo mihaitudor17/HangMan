@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Avatars\1.jpg" />
+    <None Remove="Resources\Avatars\10.jpg" />
+    <None Remove="Resources\Avatars\11.jpg" />
+    <None Remove="Resources\Avatars\12.jpg" />
+    <None Remove="Resources\Avatars\13.jpg" />
+    <None Remove="Resources\Avatars\14.jpg" />
+    <None Remove="Resources\Avatars\15.jpg" />
+    <None Remove="Resources\Avatars\16.jpg" />
+    <None Remove="Resources\Avatars\2.jpg" />
+    <None Remove="Resources\Avatars\3.jpg" />
+    <None Remove="Resources\Avatars\4.jpg" />
+    <None Remove="Resources\Avatars\5.jpg" />
+    <None Remove="Resources\Avatars\6.jpg" />
+    <None Remove="Resources\Avatars\7.jpg" />
+    <None Remove="Resources\Avatars\8.jpg" />
+    <None Remove="Resources\Avatars\9.jpg" />
+    <None Remove="Resources\Avatars\default.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Avatars\1.jpg" />
+    <Resource Include="Resources\Avatars\10.jpg" />
+    <Resource Include="Resources\Avatars\11.jpg" />
+    <Resource Include="Resources\Avatars\12.jpg" />
+    <Resource Include="Resources\Avatars\13.jpg" />
+    <Resource Include="Resources\Avatars\14.jpg" />
+    <Resource Include="Resources\Avatars\15.jpg" />
+    <Resource Include="Resources\Avatars\16.jpg" />
+    <Resource Include="Resources\Avatars\2.jpg" />
+    <Resource Include="Resources\Avatars\3.jpg" />
+    <Resource Include="Resources\Avatars\4.jpg" />
+    <Resource Include="Resources\Avatars\5.jpg" />
+    <Resource Include="Resources\Avatars\6.jpg" />
+    <Resource Include="Resources\Avatars\7.jpg" />
+    <Resource Include="Resources\Avatars\8.jpg" />
+    <Resource Include="Resources\Avatars\9.jpg" />
+    <Resource Include="Resources\Avatars\default.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Saves\" />
+  </ItemGroup>
+
+</Project>
