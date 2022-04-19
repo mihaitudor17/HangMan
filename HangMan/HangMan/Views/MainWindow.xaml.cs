@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HangMan.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HangMan.Models;
 namespace HangMan
 {
     /// <summary>
@@ -20,12 +22,15 @@ namespace HangMan
     public partial class MainWindow : Window
     {
         User user;
+        GameLogic gl;
         public MainWindow(object user)
         {
             InitializeComponent();
-            // this.user = (User?)user;
             this.user = user as User;
-            turc.Text=this.user.Name;
+            text.Text=this.user.Name;
+            image.Source= new BitmapImage(new Uri(this.user.IconPath.ToString()));
+            gl = new GameLogic(this.DataContext as Player);
         }
+
     }
 }

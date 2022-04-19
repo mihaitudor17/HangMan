@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\blaga\\OneDrive\\Facultate\\Teme\\RC\\HangMan\\HangMan\\HangMan.csproj",
+      "projectUniqueName": "C:\\GitHub\\HangMan\\HangMan\\HangMan\\HangMan.csproj",
       "projectName": "HangMan",
-      "projectPath": "C:\\Users\\blaga\\OneDrive\\Facultate\\Teme\\RC\\HangMan\\HangMan\\HangMan.csproj",
+      "projectPath": "C:\\GitHub\\HangMan\\HangMan\\HangMan\\HangMan.csproj",
       "packagesPath": "C:\\Users\\blaga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\blaga\\OneDrive\\Facultate\\Teme\\RC\\HangMan\\HangMan\\obj\\",
+      "outputPath": "C:\\GitHub\\HangMan\\HangMan\\HangMan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\blaga\\AppData\\Roaming\\NuGet\\NuGet.Config",

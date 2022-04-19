@@ -4,10 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HangMan"
+        xmlns:vm="clr-namespace:HangMan.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:PlayerVM/>
+    </Window.DataContext>
     <Grid>
-        <Menu DockPanel.Dock="Top" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu DockPanel.Dock="Top" Grid.Row="0" >
             <MenuItem Header="_File">
             <MenuItem Header="_New Game" />
             <MenuItem Header="_Open Game" />
@@ -25,7 +35,13 @@
                 <MenuItem Header="_About"/>
             </MenuItem>
         </Menu>
-        <TextBlock Name="text" VerticalAlignment="Center"></TextBlock>
-        <Image Name="image"></Image>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Image Name="image"></Image>
+            <TextBlock Name="text" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold"></TextBlock>
+            <TextBlock HorizontalAlignment="Right"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Image HorizontalAlignment="Left" Source="{ Binding player.IconPath}"></Image>
+        </StackPanel>
     </Grid>
 </Window>

@@ -21,7 +21,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" TextAlignment="Center" FontSize="14" FontWeight="Bold">Welcome to Hangman, have fun!</TextBlock>
-        <ListBox Name="listbox" Grid.Column="0" Grid.Row="1" DisplayMemberPath="Name" ItemsSource="{Binding Users}" SelectionChanged="ListBox_SelectionChanged" Margin="10"></ListBox>
+        <ListBox Name="listbox" Grid.Column="0" Grid.Row="1" DisplayMemberPath="Name" ItemsSource="{Binding Users}" SelectionChanged="ListBox_SelectionChanged" Margin="10" FontSize="16"></ListBox>
         <Image Source="{Binding Icon}" Grid.Column="1" Grid.Row="1" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" ></Image>
         <!--<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom">
