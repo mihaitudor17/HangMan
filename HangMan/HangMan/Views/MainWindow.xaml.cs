@@ -41,5 +41,38 @@ namespace HangMan
                 gl.ChooseWord(short.Parse(((MenuItem)sender).Tag.ToString()));
             }
         }
+
+        private void NewGame(object sender, RoutedEventArgs e)
+        {
+            if (flag == true)
+            {
+                gl.RestartGame();
+                flag = false;
+            }
+        }
+
+        private void SaveGame(object sender, RoutedEventArgs e)
+        {
+            if(flag == true)
+            gl.SaveGame();
+        }
+
+        private void OpenGame(object sender, RoutedEventArgs e)
+        {
+            gl.StopTimer();
+            gl.OpenGame();
+            flag = true;
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            gl.SaveGame();
+            this.Close();
+        }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("cmd", "/c start https://github.com/mihaitudor17");
+        }
     }
 }

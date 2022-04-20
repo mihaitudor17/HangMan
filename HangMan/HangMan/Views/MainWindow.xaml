@@ -19,11 +19,11 @@
         </Grid.RowDefinitions>
         <Menu DockPanel.Dock="Top" Grid.Row="0" >
             <MenuItem Header="_File">
-            <MenuItem Header="_New Game" />
-            <MenuItem Header="_Open Game" />
-            <MenuItem Header="_Save Game" />
+            <MenuItem Header="_New Game" Click="NewGame"/>
+            <MenuItem Header="_Open Game" Click="OpenGame"/>
+            <MenuItem Header="_Save Game" Click="SaveGame"/>
             <Separator />
-            <MenuItem Header="_Exit" />
+            <MenuItem Header="_Exit" Click="Exit" />
             </MenuItem>
             <MenuItem Header="Categories">
                 <MenuItem Tag="1"  Header="_All categories" Click="StartGame"/>
@@ -32,7 +32,7 @@
                 <MenuItem Tag="4"  Header="_Rivers" Click="StartGame"/>
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="_About"/>
+                <MenuItem Header="_About" Click="About"/>
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1" >

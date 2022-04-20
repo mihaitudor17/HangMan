@@ -33,11 +33,6 @@ namespace HangMan
         {
             Saves.Load_Saves((this.DataContext as UserList).Users);
         }
-        //~Start()
-        //{
-        //    System.IO.File.WriteAllText("../../../Resources/Saves/Users.json", "sddsadsadasdsaturc");
-        //    Saves.Load_Saves((this.DataContext as UserList).Users);
-        //}
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (listbox.SelectedItem != null)
