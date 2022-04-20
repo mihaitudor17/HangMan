@@ -56,7 +56,7 @@
             </Grid.ColumnDefinitions>
             <Image  Grid.Column="0"  Source="{ Binding player.GarrowPath}"></Image>
             <UniformGrid Rows="3" Columns="10" Grid.Column="1">
-                <ItemsControl ItemsSource="{Binding MyData}" Width="600" Height="300">
+                <ItemsControl ItemsSource="{Binding MyData}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Button MinWidth="60" MinHeight="60" Margin="5" Content="{Binding Content}" Command="{Binding Command}"/>
