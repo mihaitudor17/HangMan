@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HangMan.Models;
+using HangMan.ViewModels;
+
 namespace HangMan
 {
     /// <summary>
@@ -21,16 +23,23 @@ namespace HangMan
     /// </summary>
     public partial class MainWindow : Window
     {
-        User user;
         GameLogic gl;
+        bool flag=false;
         public MainWindow(object user)
         {
             InitializeComponent();
-            this.user = user as User;
-            text.Text=this.user.Name;
-            image.Source= new BitmapImage(new Uri(this.user.IconPath.ToString()));
-            gl = new GameLogic(this.DataContext as Player);
+            gl = new GameLogic((this.DataContext as PlayerVM).player);
+            (this.DataContext as PlayerVM).player.Name = (user as User).Name;
+            (this.DataContext as PlayerVM).player.IconPath = (user as User).IconPath;
         }
-
+        private void StartGame(object sender, RoutedEventArgs e)
+        {
+            if (flag == false)
+            {
+                flag= true;
+                gl.StartTimer();
+                gl.ChooseWord(short.Parse(((MenuItem)sender).Tag.ToString()));
+            }
+        }
     }
 }

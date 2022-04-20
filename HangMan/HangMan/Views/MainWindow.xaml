@@ -26,22 +26,33 @@
             <MenuItem Header="_Exit" />
             </MenuItem>
             <MenuItem Header="Categories">
-                <MenuItem Header="_All categories"/>
-                <MenuItem Header="_Cars"/>
-                <MenuItem Header="_Movies"/>
-                <MenuItem Header="_Rivers"/>
+                <MenuItem Tag="1"  Header="_All categories" Click="StartGame"/>
+                <MenuItem Tag="2"  Header="_Cars" Click="StartGame"/>
+                <MenuItem Tag="3"  Header="_Movies" Click="StartGame"/>
+                <MenuItem Tag="4"  Header="_Rivers" Click="StartGame"/>
             </MenuItem>
             <MenuItem Header="_Help">
                 <MenuItem Header="_About"/>
             </MenuItem>
         </Menu>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Image Name="image"></Image>
-            <TextBlock Name="text" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold"></TextBlock>
-            <TextBlock HorizontalAlignment="Right"></TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Image HorizontalAlignment="Left" Source="{ Binding player.IconPath}"></Image>
-        </StackPanel>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Image  Source="{Binding player.IconPath}"></Image>
+                <TextBlock Text="{Binding player.Name}" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold"></TextBlock>
+            </StackPanel>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Text="{Binding player.Timer}"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0"  Source="{ Binding player.GarrowPath}"></Image>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="1" Text="{Binding player.Letters}" FontSize="30"></TextBlock>
+        </Grid>
     </Grid>
 </Window>

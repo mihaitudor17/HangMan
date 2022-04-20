@@ -9,6 +9,7 @@ namespace HangMan.Models
 {
     class Player : INotifyPropertyChanged
     {
+        string name;
         string savePath;
         string iconPath;
         string garrowPath;
@@ -28,7 +29,18 @@ namespace HangMan.Models
                 NotifyPropertyChanged("IconPath");
             }
         }
-
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
         public string UsedLetters { get => usedLetters; set { usedLetters = value; NotifyPropertyChanged("UsedLetters"); } }
 
         public string Letters { get => letters; set { letters = value; NotifyPropertyChanged("Letters"); } }

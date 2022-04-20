@@ -11,13 +11,15 @@ namespace HangMan.ViewModels
 {
     class PlayerVM : INotifyPropertyChanged
     {
-        Player player { get => this.player; set { player = value; OnPropertyChanged(); } }
+        private  Player _player;
         public PlayerVM()
         {
-            player = new Player();
-            player.GarrowPath = @"\Resources\Garrow\1.png";
-            player.Timer = "5:00";
+            _player = new Player();
+            _player.GarrowPath = @"\Resources\Garrow\1.png";
+            _player.Timer = "5:00";
+            _player.Letters = "Pick a category";
         }
+        public Player player { get { return _player; } set { _player = value; OnPropertyChanged(); } }
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {

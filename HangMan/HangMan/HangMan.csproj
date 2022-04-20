@@ -25,6 +25,13 @@
     <None Remove="Resources\Avatars\8.jpg" />
     <None Remove="Resources\Avatars\9.jpg" />
     <None Remove="Resources\Avatars\default.png" />
+    <None Remove="Resources\Garrow\1.png" />
+    <None Remove="Resources\Garrow\2.png" />
+    <None Remove="Resources\Garrow\3.png" />
+    <None Remove="Resources\Garrow\4.png" />
+    <None Remove="Resources\Garrow\5.png" />
+    <None Remove="Resources\Garrow\6.png" />
+    <None Remove="Resources\Garrow\7.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +56,13 @@
     <Resource Include="Resources\Avatars\8.jpg" />
     <Resource Include="Resources\Avatars\9.jpg" />
     <Resource Include="Resources\Avatars\default.png" />
+    <Resource Include="Resources\Garrow\1.png" />
+    <Resource Include="Resources\Garrow\2.png" />
+    <Resource Include="Resources\Garrow\3.png" />
+    <Resource Include="Resources\Garrow\4.png" />
+    <Resource Include="Resources\Garrow\5.png" />
+    <Resource Include="Resources\Garrow\6.png" />
+    <Resource Include="Resources\Garrow\7.png" />
   </ItemGroup>
 
   <ItemGroup>

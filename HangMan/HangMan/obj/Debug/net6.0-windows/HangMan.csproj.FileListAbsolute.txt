@@ -42,7 +42,6 @@ C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\HangMan.exe
 C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\HangMan.deps.json
 C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\HangMan.runtimeconfig.json
 C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\HangMan.dll
-C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\ref\HangMan.dll
 C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\HangMan.pdb
 C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\App.baml
@@ -56,3 +55,4 @@ C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.AssemblyInfo.
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.csproj.CoreCompileInputs.cache
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.csproj.CopyComplete
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.genruntimeconfig.cache
+C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\refint\HangMan.dll
