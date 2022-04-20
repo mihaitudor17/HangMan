@@ -74,5 +74,15 @@ namespace HangMan
         {
             System.Diagnostics.Process.Start("cmd", "/c start https://github.com/mihaitudor17");
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            gl.SaveGame(); 
+        }
+
+        private void Statistics(object sender, RoutedEventArgs e)
+        {
+            //deschid fereastra cu statistici
+        }
     }
 }

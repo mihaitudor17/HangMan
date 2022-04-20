@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,21 @@ namespace HangMan.Services
         }
         public void DeleteUser(int index)
         {
+            if (File.Exists(users[index].SavePath))
+            {
+                var path = @"../../../Resources/Saves/";
+                path += users[index].Name;
+                System.IO.DirectoryInfo di = new DirectoryInfo(path);
+                foreach (FileInfo file in di.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in di.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+                Directory.Delete(path);
+            }
             users.RemoveAt(index);
         }
         public void AddUser(string name, string iconPath, string savePath)

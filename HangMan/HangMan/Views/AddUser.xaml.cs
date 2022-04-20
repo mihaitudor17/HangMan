@@ -44,7 +44,9 @@ namespace HangMan.Views
         }
         private void Add(object sender, RoutedEventArgs e)
         {
-            bl.AddUser(text.Text, img.Source.ToString(), " ");
+            var path = @"../../../Resources/Saves/";
+            path += this.text.Text.ToString() + @"/" + this.text.Text.ToString() + ".json";
+            bl.AddUser(text.Text, img.Source.ToString(), path);
             this.Close();
         }
     }

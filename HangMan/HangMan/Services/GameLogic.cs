@@ -20,6 +20,7 @@ namespace HangMan.Services
     {
         Player player;
         DispatcherTimer _timer;
+        int mistakes = 1;
         public GameLogic(Player player)
         {
             this.player = player;

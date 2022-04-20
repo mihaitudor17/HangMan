@@ -62,7 +62,6 @@
     <Resource Include="Resources\Garrow\4.png" />
     <Resource Include="Resources\Garrow\5.png" />
     <Resource Include="Resources\Garrow\6.png" />
-    <Resource Include="Resources\Garrow\7.png" />
   </ItemGroup>
 
   <ItemGroup>
