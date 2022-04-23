@@ -55,4 +55,4 @@ C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.AssemblyInfo.
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.csproj.CoreCompileInputs.cache
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.csproj.CopyComplete
 C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\HangMan.genruntimeconfig.cache
-C:\GitHub\HangMan\HangMan\HangMan\obj\Debug\net6.0-windows\refint\HangMan.dll
+C:\GitHub\HangMan\HangMan\HangMan\bin\Debug\net6.0-windows\ref\HangMan.dll

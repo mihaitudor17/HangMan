@@ -1,4 +1,5 @@
-﻿using HangMan.Models;
+﻿using HangMan.Commands;
+using HangMan.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace HangMan.Services
         Player player;
         DispatcherTimer _timer;
         int mistakes = 1;
+        string guess;
         public GameLogic(Player player)
         {
             this.player = player;
@@ -76,22 +78,26 @@ namespace HangMan.Services
                     }
                     temp = vs;
                     index = rand.Next(temp.Count);
-                    this.player.Letters = temp[index];
+                    guess = temp[index];
+                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ",temp[index].Length));
                     break;
                 case 2:
                     temp = word.words["cars"];
                     index = rand.Next(temp.Count);
-                    this.player.Letters = temp[index];
+                    guess = temp[index];
+                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
                     break;
                 case 3:
                     temp = word.words["movies"];
                     index = rand.Next(temp.Count);
-                    this.player.Letters = temp[index];
+                    guess = temp[index];
+                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
                     break;
                 case 4:
                     temp = word.words["rivers"];
                     index = rand.Next(temp.Count);
-                    this.player.Letters = temp[index];
+                    guess = temp[index];
+                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
                     break;
             }
         }
@@ -130,6 +136,10 @@ namespace HangMan.Services
                 temp2 += temp.Timer[3];
                 StartTimer(Double.Parse(temp1)+(Double.Parse(temp2)/60));
             }
+        }
+        public void Letter(string letter)
+        {
+            this.player.Name=letter;
         }
        
     }
