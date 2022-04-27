@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HangMan.Models;
 using HangMan.ViewModels;
+using HangMan.Views;
 
 namespace HangMan
 {
@@ -29,16 +30,17 @@ namespace HangMan
         {
             InitializeComponent();
             gl = new GameLogic((this.DataContext as PlayerVM).player);
+            (this.DataContext as PlayerVM).GL= gl;
             (this.DataContext as PlayerVM).player.Name = (user as User).Name;
             (this.DataContext as PlayerVM).player.IconPath = (user as User).IconPath;
         }
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            if (flag == false)
+            if ((this.DataContext as PlayerVM).player.Letters== "Pick a category")
             {
                 flag= true;
                 gl.StartTimer();
-                gl.ChooseWord(short.Parse(((MenuItem)sender).Tag.ToString()));
+                gl.ChooseWord(short.Parse(((MenuItem)sender).Tag.ToString()),ref flag);
             }
         }
 
@@ -82,7 +84,9 @@ namespace HangMan
 
         private void Statistics(object sender, RoutedEventArgs e)
         {
-            //deschid fereastra cu statistici
+
+            Statistics statistics = new Statistics((this.DataContext as PlayerVM).player.Statistics.Item1, (this.DataContext as PlayerVM).player.Statistics.Item2);
+            statistics.Show();
         }
     }
 }

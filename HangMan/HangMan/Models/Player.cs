@@ -16,6 +16,7 @@ namespace HangMan.Models
         string timer;
         string letters;
         string usedLetters;
+        string mistakes;
         Tuple<int, int> statistics;
         public string IconPath
         {
@@ -27,6 +28,18 @@ namespace HangMan.Models
             {
                 iconPath = value;
                 NotifyPropertyChanged("IconPath");
+            }
+        }
+        public string Mistakes
+        {
+            get
+            {
+                return mistakes;
+            }
+            set
+            {
+                mistakes = value;
+                NotifyPropertyChanged("Mistakes");
             }
         }
         public string Name

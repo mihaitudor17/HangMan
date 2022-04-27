@@ -62,9 +62,12 @@ namespace HangMan
         }
         private void Play(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow = new MainWindow(listbox.SelectedItem);
-            Application.Current.MainWindow.Show();
-            this.Close();
+            if (listbox.SelectedItem != null)
+            {
+                Application.Current.MainWindow = new MainWindow(listbox.SelectedItem);
+                Application.Current.MainWindow.Show();
+                this.Close();
+            }
         }
     }
 }
