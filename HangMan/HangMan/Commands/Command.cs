@@ -29,9 +29,12 @@ namespace HangMan.Commands
 
         public void Execute(object? parameter)
         {
-            gl = this.player.GL;
-            if(gl.Letter((parameter as Button).Content.ToString().ToUpper(), (parameter as Button)) ==1)
-                (parameter as Button).IsEnabled = false;
+            if ((parameter as Button).Content.ToString() != " ")
+            {
+                gl = this.player.GL;
+                if (gl.Letter((parameter as Button).Content.ToString().ToUpper(), (parameter as Button)) == 1)
+                    (parameter as Button).IsEnabled = false;
+            }
         }
     }
 }

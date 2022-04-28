@@ -17,7 +17,20 @@ namespace HangMan.Models
         string letters;
         string usedLetters;
         string mistakes;
+        int level;
         Tuple<int, int> statistics;
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+            set
+            {
+                level = value;
+                NotifyPropertyChanged("Level");
+            }
+        }
         public string IconPath
         {
             get

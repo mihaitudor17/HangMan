@@ -1,0 +1,6 @@
+C:\Users\blaga\Desktop\publish\HangMan.exe
+C:\Users\blaga\Desktop\publish\HangMan.dll
+C:\Users\blaga\Desktop\publish\HangMan.deps.json
+C:\Users\blaga\Desktop\publish\HangMan.runtimeconfig.json
+C:\Users\blaga\Desktop\publish\HangMan.pdb
+C:\Users\blaga\Desktop\publish\Newtonsoft.Json.dll

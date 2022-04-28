@@ -40,14 +40,18 @@
         </Menu>
         <Grid Grid.Row="1" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal">
                 <Image  Source="{Binding player.IconPath}"></Image>
                 <TextBlock Text="{Binding player.Name}" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold"></TextBlock>
             </StackPanel>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Text="{Binding player.Timer}"></TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" FontWeight="SemiBold" Text="Level:"></TextBlock>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" FontWeight="SemiBold" Text="{Binding player.Level}"></TextBlock>
+            <TextBlock Grid.Column="3" HorizontalAlignment="Center" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Text="{Binding player.Timer}"></TextBlock>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>

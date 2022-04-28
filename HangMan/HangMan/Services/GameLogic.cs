@@ -27,6 +27,7 @@ namespace HangMan.Services
         string guess;
         List<Button> buttons=new List<Button>();
         bool flag;
+        int level=1;
         public GameLogic(Player player)
         {
             this.player = player;
@@ -36,13 +37,19 @@ namespace HangMan.Services
         }
         public void EndGame(int win)
         {
-            if(win==1)
-                player.Statistics = (player.Statistics.Item1+1,player.Statistics.Item2).ToTuple<int,int>();
+            if (win == 1)
+            {
+                if (level == 5)
+                {
+                    player.Statistics = (player.Statistics.Item1 + 1, player.Statistics.Item2).ToTuple<int, int>();
+                    level = 0;
+                }
+            }
             else
-                player.Statistics = (player.Statistics.Item1,player.Statistics.Item2+1).ToTuple<int, int>();
+                player.Statistics = (player.Statistics.Item1, player.Statistics.Item2 + 1).ToTuple<int, int>();
             Statistics statistics=new Statistics(player.Statistics.Item1,player.Statistics.Item2);
             statistics.Show();
-            RestartGame();
+            RestartGame(win);
         }
         public void StartTimer(double time=5)
         {
@@ -59,7 +66,7 @@ namespace HangMan.Services
             }, Application.Current.Dispatcher);
             _timer.Start();
         }
-        public void RestartGame()
+        public void RestartGame(int lvl=0)
         {
             _timer.Stop();
             this.player.Timer = "5:00";
@@ -72,11 +79,26 @@ namespace HangMan.Services
             this.player.Mistakes = "";
             flag = false;
             mistakes = 1;
+            if(lvl==1)
+            {
+                level++;
+                player.Level = level;
+            }
         }
         public void StopTimer()
         {
             if(_timer != null)
             _timer.Stop();
+        }
+        public string MaskWord(string word)
+        {
+            string temp = "";
+            foreach (char c in word)
+                if (c != ' ')
+                    temp += "_ ";
+                else
+                    temp += "  ";
+            return temp;
         }
         public void ChooseWord(short choice,ref bool flag)
         {
@@ -101,25 +123,25 @@ namespace HangMan.Services
                     temp = vs;
                     index = rand.Next(temp.Count);
                     guess = temp[index];
-                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ",temp[index].Length));
+                    this.player.Letters=MaskWord(temp[index]);
                     break;
                 case 2:
                     temp = word.words["cars"];
                     index = rand.Next(temp.Count);
                     guess = temp[index];
-                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
+                    this.player.Letters = MaskWord(temp[index]);
                     break;
                 case 3:
                     temp = word.words["movies"];
                     index = rand.Next(temp.Count);
                     guess = temp[index];
-                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
+                    this.player.Letters = MaskWord(temp[index]);
                     break;
                 case 4:
                     temp = word.words["rivers"];
                     index = rand.Next(temp.Count);
                     guess = temp[index];
-                    this.player.Letters = string.Concat(Enumerable.Repeat("_ ", temp[index].Length));
+                    this.player.Letters = MaskWord(temp[index]);
                     break;
             }
         }

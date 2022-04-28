@@ -29,6 +29,7 @@ namespace HangMan.ViewModels
             _player.Timer = "5:00";
             _player.Letters = "Pick a category";
             _player.Mistakes = "";
+            _player.Level = 1;
             _player.Statistics =(0, 0).ToTuple<int,int>();
         }
         public GameLogic GL { get=>gl; set=>gl = value;}
